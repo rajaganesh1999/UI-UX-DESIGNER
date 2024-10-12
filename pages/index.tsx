@@ -48,6 +48,7 @@ export default function Homepage() {
           }}
         >
           <Image src="/images/cloudzs.png" alt="CloudZS Logo" width={120} height={40} />
+          
         </motion.div>
         <nav className="hidden md:flex space-x-6">
           {["Services", "About Us", "Clients", "Contact"].map((item) => (

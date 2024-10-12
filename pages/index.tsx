@@ -46,10 +46,15 @@ export default function Homepage() {
             delay: 0.5,
             ease: [0, 0.71, 0.2, 1.01]
           }}
+<<<<<<< HEAD
         >
           <Link href="https://sharedby.blomp.com/hADgrh">
           <Image src="https://sharedby.blomp.com/hADgrh" alt="CloudZS Logo" width={120} height={40} />
           </Link>
+=======
+          
+          <Image src="/images/cloudzs.png" alt="CloudZS Logo" width={120} height={40} />
+>>>>>>> 137e219666274e2becf0534624a0ad325ddbce5e
 
         </motion.div>
         <nav className="hidden md:flex space-x-6">

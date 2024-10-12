@@ -49,7 +49,7 @@ export default function Homepage() {
         >
               <Image 
                src="/images/cloudzs.png" 
-               alt="CloudZS Logo" 
+               alt="CloudZS Logo1" 
                width={120} 
                height={40} 
                />

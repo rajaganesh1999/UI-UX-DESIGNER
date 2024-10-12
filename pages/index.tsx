@@ -47,8 +47,10 @@ export default function Homepage() {
             ease: [0, 0.71, 0.2, 1.01]
           }}
         >
-          <Image src="/images/cloudzs.png" alt="CloudZS Logo" width={120} height={40} />
-          
+          <Link href="https://sharedby.blomp.com/hADgrh">
+          <Image src="https://sharedby.blomp.com/hADgrh" alt="CloudZS Logo" width={120} height={40} />
+          </Link>
+
         </motion.div>
         <nav className="hidden md:flex space-x-6">
           {["Services", "About Us", "Clients", "Contact"].map((item) => (
@@ -138,7 +140,7 @@ export default function Homepage() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.6 }}
             >
-              <Button className="bg-[#FF7900] text-white hover:bg-[#38bdf8]">
+              <Button className="bg-[#FF7900] text-white hover:bg-[#f0f9ff] hover:text-black">
                 Learn More
               </Button>
             </motion.div>
@@ -270,10 +272,18 @@ export default function Homepage() {
               <p className="text-xl mb-8">
                 Get in touch with our team of experts to learn how CloudZS can protect your business.
               </p>
-              <Button className="bg-white text-[#FF7900] hover:bg-[#3476F0] hover:text-white">
+              <Button 
+              className="bg-[#fafaf9] text-black hover:bg-[#3476F0]" 
+              style={{ color: '#ea580c' }} 
+              onMouseEnter={(e) => (e.currentTarget.style.color = 'white')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = 'black')}
+>
               Contact Us
               </Button>
 
+
+
+              
             </motion.div>
           </div>
         </section>
@@ -283,8 +293,12 @@ export default function Homepage() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
           <div>
 
-          <Image src="/images/cloudzs.png" alt="CloudZS Logo" width={120} height={40} />
+          <Link href="https://sharedby.blomp.com/hADgrh">
+          <Image src="https://sharedby.blomp.com/hADgrh" alt="CloudZS Logo" width={120} height={40} />
+          </Link>
 
+
+          
             <p className="text-sm">Redefining cloud security for businesses worldwide.</p>
           </div>
           {[
@@ -323,7 +337,7 @@ export default function Homepage() {
       <AnimatePresence>
         {showScrollTop && (
           <motion.button
-            className="fixed bottom-6 right-6 bg-[#facc15] text-white p-3 rounded-full shadow-lg hover:bg-[#111827] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#3476F0]"
+            className="fixed bottom-6 right-6 bg-[#fbbf24] text-white p-3 rounded-full shadow-lg hover:bg-[#0a0a0a] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#3476F0]"
             onClick={scrollToTop}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

@@ -48,6 +48,7 @@ export default function Homepage() {
           }}
         >
           <Image src="/images/cloudzs.png" alt="CloudZS Logo" width={120} height={40} />
+          
         </motion.div>
         <nav className="hidden md:flex space-x-6">
           {["Services", "About Us", "Clients", "Contact"].map((item) => (
@@ -281,7 +282,9 @@ export default function Homepage() {
       <footer className="bg-gray-800 text-white py-12 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
           <div>
+
           <Image src="/images/cloudzs.png" alt="CloudZS Logo" width={120} height={40} />
+
             <p className="text-sm">Redefining cloud security for businesses worldwide.</p>
           </div>
           {[

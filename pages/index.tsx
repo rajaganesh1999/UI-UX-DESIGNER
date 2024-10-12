@@ -47,7 +47,13 @@ export default function Homepage() {
             ease: [0, 0.71, 0.2, 1.01]
           }}
         >
-          <Image src="/images/cloudzs.png" alt="CloudZS Logo" width={120} height={40} />
+              <Image 
+               src="/images/cloudzs.png" 
+               alt="CloudZS Logo" 
+               width={120} 
+               height={40} 
+               />
+
           
         </motion.div>
         <nav className="hidden md:flex space-x-6">

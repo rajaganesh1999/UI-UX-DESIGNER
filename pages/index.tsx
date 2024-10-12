@@ -46,15 +46,9 @@ export default function Homepage() {
             delay: 0.5,
             ease: [0, 0.71, 0.2, 1.01]
           }}
-        >
-              <Image 
-               src="/images/cloudzs.png" 
-               alt="CloudZS Logo1" 
-               width={120} 
-               height={40} 
-               />
-
           
+          <Image src="/images/cloudzs.png" alt="CloudZS Logo" width={120} height={40} />
+
         </motion.div>
         <nav className="hidden md:flex space-x-6">
           {["Services", "About Us", "Clients", "Contact"].map((item) => (

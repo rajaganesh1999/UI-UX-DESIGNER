@@ -1,34 +1,34 @@
-import { useState, useEffect } from "react"
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ShieldCheck, Cloud, Lock, Zap, Menu, X, ChevronUp } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
+import { useState, useEffect } from "react";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ShieldCheck, Cloud, Lock, Zap, Menu, X, ChevronUp } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Homepage() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [showScrollTop, setShowScrollTop] = useState(false)
-  const { scrollYProgress } = useScroll()
-  const opacity = useTransform(scrollYProgress, [0, 0.05], [1, 0])
-  const scale = useTransform(scrollYProgress, [0, 0.05], [1, 0.95])
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  const { scrollYProgress } = useScroll();
+  const opacity = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.05], [1, 0.95]);
 
   useEffect(() => {
-    const handleResize = () => setIsMenuOpen(false)
+    const handleResize = () => setIsMenuOpen(false);
     const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 300)
-    }
-    window.addEventListener("resize", handleResize)
-    window.addEventListener("scroll", handleScroll)
+      setShowScrollTop(window.scrollY > 300);
+    };
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("resize", handleResize)
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
-  }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -46,16 +46,16 @@ export default function Homepage() {
             delay: 0.5,
             ease: [0, 0.71, 0.2, 1.01]
           }}
-<<<<<<< HEAD
         >
           <Link href="https://sharedby.blomp.com/hADgrh">
-          <Image src="https://sharedby.blomp.com/hADgrh" alt="CloudZS Logo" width={120} height={40} />
+            <Image
+              src="https://sharedby.blomp.com/hADgrh"
+              alt="CloudZS Logo"
+              width={120}
+              height={40}
+              className="cursor-pointer"
+            />
           </Link>
-=======
-          
-          <Image src="/images/cloudzs.png" alt="CloudZS Logo" width={120} height={40} />
->>>>>>> 137e219666274e2becf0534624a0ad325ddbce5e
-
         </motion.div>
         <nav className="hidden md:flex space-x-6">
           {["Services", "About Us", "Clients", "Contact"].map((item) => (
@@ -278,17 +278,12 @@ export default function Homepage() {
                 Get in touch with our team of experts to learn how CloudZS can protect your business.
               </p>
               <Button 
-              className="bg-[#fafaf9] text-black hover:bg-[#3476F0]" 
-              style={{ color: '#ea580c' }} 
-              onMouseEnter={(e) => (e.currentTarget.style.color = 'white')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = 'black')}
->
-              Contact Us
+                className="bg-[#fafaf9] text-black hover:bg-[#3476F0] hover:text-white"
+                onMouseEnter={(e) => (e.currentTarget.style.color = 'white')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = 'black')}
+              >
+                Contact Us
               </Button>
-
-
-
-              
             </motion.div>
           </div>
         </section>
@@ -297,13 +292,14 @@ export default function Homepage() {
       <footer className="bg-gray-800 text-white py-12 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
           <div>
-
-          <Link href="https://sharedby.blomp.com/hADgrh">
-          <Image src="https://sharedby.blomp.com/hADgrh" alt="CloudZS Logo" width={120} height={40} />
-          </Link>
-
-
-          
+            <Link href="https://sharedby.blomp.com/hADgrh">
+              <Image
+                src="https://sharedby.blomp.com/hADgrh"
+                alt="CloudZS Logo"
+                width={120}
+                height={40}
+              />
+            </Link>
             <p className="text-sm">Redefining cloud security for businesses worldwide.</p>
           </div>
           {[
@@ -355,5 +351,5 @@ export default function Homepage() {
         )}
       </AnimatePresence>
     </div>
-  )
+  );
 }
